@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<robot name="lhd" xmlns:xacro="http://ros.org/wiki/xacro">
+  <arg name="is_ignition" default="true"/>
+  <gazebo reference="mine_link">
+        <mu1>1000000000.0</mu1>
+        <mu2>1000000000.0</mu2>
+  </gazebo>
+</robot>

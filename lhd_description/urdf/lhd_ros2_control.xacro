@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<robot name="lhd" xmlns:xacro="http://ros.org/wiki/xacro">
+    <ros2_control name="RobotSystem" type="system">
+
+        <xacro:if value="$(arg is_sim)">
+            <xacro:if value="$(arg is_ignition)">
+                <hardware>
+                    <plugin>ign_ros2_control/IgnitionSystem</plugin> 
+                    <!-- i guess this is your harhware interface if ur using simulation -->
+                </hardware>
+            </xacro:if>
+
+            <xacro:unless value="$(arg is_ignition)">
+                <hardware>
+                    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+                </hardware>
+            </xacro:unless>
+        </xacro:if>
+ 
+        <xacro:unless value="$(arg is_sim)">
+            <hardware>
+                <plugin>lhd_firmware/LhdInterface</plugin>
+                <param name="port">/dev/ttyUSB0</param>
+            </hardware>
+        </xacro:unless>
+
+
+        
+
+        <!-- <xacro:macro name="set_joint_interface" params="joint_name joint_min joint_max">
+            <joint name="${joint_name}">
+                <command_interface name="position">
+                    <param name="min">${joint_min}</param>
+                    <param name="max">${joint_max}</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+        </xacro:macro>
+
+        <xacro:set_joint_interface joint_name="c1_j" joint_min="0" joint_max="2.0944"/>
+        <xacro:set_joint_interface joint_name="c2_j" joint_min="0" joint_max="2.0944"/> -->
+
+                <!-- ros2_control Common Interfaces -->
+        <joint name="front_joint">
+            <command_interface name="position">
+              <param name="min">-0.785398</param>
+              <param name="max">0.785398</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        <joint name="arm_joint">
+            <command_interface name="position">
+              <param name="min">-0.785398</param>
+              <param name="max">0.785398</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        <joint name="bucket_joint">
+            <command_interface name="position">
+              <param name="min">-0.785398</param>
+              <param name="max">0.785398</param>
+            </command_interface>
+            <state_interface name="position" />
+        </joint>
+        
+        <joint name="blw_joint">
+            <command_interface name="velocity">
+              <param name="min">-1</param>
+              <param name="max">1</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+
+        <joint name="brw_joint">
+            <command_interface name="velocity">
+              <param name="min">-1</param>
+              <param name="max">1</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+
+    </ros2_control>
+
+
+    
+</robot>

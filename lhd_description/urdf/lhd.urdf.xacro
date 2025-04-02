@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="lhd"
+    xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:arg name="is_ignition" default="true"/>
+    <xacro:arg name="is_sim" default="true"/>
+    <xacro:include filename="$(find lhd_description)/urdf/lhd_gazebo.xacro" />
+    <xacro:include filename="$(find lhd_description)/urdf/lhd_ros2_control.xacro" />
+    <link name="base_footprint"/>
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.29175 -0.00386 0.082893" rpy="0 0 0" />
+            <mass value="5" />
+            <inertia ixx="0.083795" ixy="-0.0073682" ixz="-0.011771" iyy="0.18217" iyz="-0.0010919" izz="0.21451" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0.019 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.984 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link" />
+        <origin xyz="0 0 0.107" rpy="0 0 0"/>
+    </joint>
+
+    <link name="laser_link">
+        <inertial>
+            <origin xyz="-0.011945780406062 -0.000381929217680526 -0.0170649378129477" rpy="0 0 0" />
+            <mass value="0.073084435549317" />
+            <inertia ixx="1.96074931730795E-05" ixy="-3.62091076640009E-07" ixz="4.28230084046735E-07" iyy="2.40983835136327E-05" iyz="1.50180909250652E-08" izz="4.14184164228595E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.1" length="0.04"/>
+            </geometry>
+            <material>
+                <color rgba="0.3 0.3 0.3 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.05" length="0.02"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="laser_joint" type="fixed">
+        <origin xyz="-0.2 0.0 0.25" rpy="0 0 3.14" />
+        <parent link="base_link" />
+        <child link="laser_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="blw">
+        <inertial>
+            <origin xyz="0 4.19E-16 -0.029" rpy="0 0 0" />
+            <mass value="0.5" />
+            <inertia ixx="0.0055957" ixy="2.7838E-05" ixz="3.6804E-18" iyy="0.0054385" iyz="-1.8935E-18" izz="0.010104" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/blw.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.3 0.3 0.3 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/blw.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="blw_joint" type="continuous">
+        <origin xyz="-0.22532 0.16938 0.054354" rpy="1.5708 0 3.1416" />
+        <parent link="base_link" />
+        <child link="blw" />
+        <axis xyz="0 0 1" />
+        <limit effort="22" velocity="5.235988" />
+        <dynamics damping="1" friction="1" />
+    </joint>
+    <link name="brw">
+        <inertial>
+            <origin xyz="-4.996E-16 -6.8905E-16 -0.029" rpy="0 0 0" />
+            <mass value="0.5" />
+            <inertia ixx="0.005587" ixy="-4.5504E-05" ixz="-2.9937E-18" iyy="0.0054472" iyz="1.5576E-18" izz="0.010104" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/brw.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.3 0.3 0.3 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/brw.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="brw_joint" type="continuous">
+        <origin xyz="-0.22532 -0.16839 0.054354" rpy="-1.5708 0 3.1416" />
+        <parent link="base_link" />
+        <child link="brw" />
+        <axis xyz="0 0 1" />
+        <limit effort="22" velocity="5.235988" />
+        <dynamics damping="1" friction="1" />
+    </joint>
+    <link name="front">
+        <inertial>
+            <origin xyz="-0.29175 -0.01514 0.082893" rpy="0 0 0" />
+            <mass value="5" />
+            <inertia ixx="0.083795" ixy="-0.0073682" ixz="-0.011771" iyy="0.18217" iyz="-0.0010919" izz="0.21451" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/front.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.831 0.604 0.227 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/front.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="front_joint" type="continuous">
+        <origin xyz="0.0361611491921704 0 0.0578520635123046" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="front" />
+        <axis xyz="0 0 1" />
+        <limit lower="-0.785" upper="0.785" effort="500" velocity="0.5" />
+        <dynamics damping="1" friction="1" />
+    </joint>
+    <link name="arm">
+        <inertial>
+            <origin xyz="-0.10629 -0.16089 -0.020504" rpy="0 0 0" />
+            <mass value="0.3" />
+            <inertia ixx="0.0013556" ixy="-0.0010935" ixz="-1.5567E-07" iyy="0.0014081" iyz="-8.7002E-08" izz="0.0026132" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/arm.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.984 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/arm.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_joint" type="continuous">
+        <origin xyz="0.10517 -0.0205 0.12894" rpy="-1.5708 0 3.1416" />
+        <parent link="front" />
+        <child link="arm" />
+        <axis xyz="0 0 1" />
+        <limit lower="-0.785" upper="0.785" effort="500" velocity="0.1" />
+        <dynamics damping="10" friction="10" />
+    </joint>
+    <link name="bucket">
+        <inertial>
+            <origin xyz="-0.031746 -0.078005 -0.020511" rpy="0 0 0" />
+            <mass value="1" />
+            <inertia ixx="0.034095" ixy="-0.0020844" ixz="5.0495E-07" iyy="0.044485" iyz="-1.8436E-06" izz="0.026049" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/bucket.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.831 0.604 0.227 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/bucket.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="bucket_joint" type="continuous">
+        <origin xyz="-0.23304 -0.2707 0" rpy="0 0 0" />
+        <parent link="arm" />
+        <child link="bucket" />
+        <axis xyz="0 0 1" />
+        <limit lower="-0.785" upper="0.785" effort="500" velocity="0.1" />
+        <dynamics damping="10" friction="10" />
+    </joint>
+    <link name="flw">
+        <inertial>
+            <origin xyz="-7.2164E-16 9.4109E-17 -0.034" rpy="0 0 0" />
+            <mass value="0.5" />
+            <inertia ixx="0.0056005" ixy="-1.1342E-17" ixz="7.2328E-18" iyy="0.0054337" iyz="-5.2371E-19" izz="0.010104" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/flw.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.3 0.3 0.3 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/flw.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="flw_joint" type="continuous">
+        <origin xyz="0.22289 0.16839 -0.0055551" rpy="1.5708 0 3.1416" />
+        <parent link="front" />
+        <child link="flw" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="frw">
+        <inertial>
+            <origin xyz="-5.2736E-16 -1.2577E-16 -0.034" rpy="0 0 0" />
+            <mass value="0.5" />
+            <inertia ixx="0.0056005" ixy="1.1501E-17" ixz="-3.6544E-18" iyy="0.0054337" iyz="2.5813E-18" izz="0.010104" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/frw.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.3 0.3 0.3 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://lhd_description/meshes/frw.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="frw_joint" type="continuous">
+        <origin xyz="0.22289 -0.16839 -0.0055551" rpy="-1.5708 0 3.1416" />
+        <parent link="front" />
+        <child link="frw" />
+        <axis xyz="0 0 1" />
+    </joint>
+</robot>
