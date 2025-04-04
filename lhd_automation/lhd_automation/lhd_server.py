@@ -44,7 +44,7 @@ class NavToWaypointServerNode(Node):
         self.get_logger().info("Received a goal")
 
         # Validate the goal request
-        if goal_request.waypoint.position.x >= 10 or goal_request.waypoint.position.x <= -10 or goal_request.waypoint.position.y >= 10 or goal_request.waypoint.position.y <= -10:
+        if goal_request.waypoint.position.x >= 20 or goal_request.waypoint.position.x <= -20 or goal_request.waypoint.position.y >= 20 or goal_request.waypoint.position.y <= -20:
             self.get_logger().info("Rejecting the goal")
             return GoalResponse.REJECT
         
