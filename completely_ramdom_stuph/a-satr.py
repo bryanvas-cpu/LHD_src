@@ -3,7 +3,7 @@ import numpy as np
 import heapq
 
 
-def load_and_threshold(image_path, threshold=128, buffer_size=5):
+def load_and_threshold(image_path):
 
     image = cv2.imread(image_path)
     cv2.imshow("image", image)
@@ -105,9 +105,9 @@ def main():
     goal = (end_y, end_x)  # (y, x) goal position in pixels
     buffer_size = 5  # Buffer around obstacles
 
-    binary_map = load_and_threshold(image_path, buffer_size=buffer_size)
+    cost_map = load_and_threshold(image_path, buffer_size=buffer_size)
 
-    path = a_star(binary_map, start, goal)
+    path = a_star(cost_map, start, goal)
 
     if path:
         print("Path found!")

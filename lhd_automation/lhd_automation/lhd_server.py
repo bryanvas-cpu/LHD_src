@@ -16,8 +16,8 @@ class NavToWaypointServerNode(Node):
     def __init__(self):
         
         self.current_position = Pose()
-        self.current_position.position.x = 0.0
-        self.current_position.position.y = 0.0
+        self.current_position.position.x = 119.0
+        self.current_position.position.y = 111.0
         self.current_position.position.z = 0.0
         
         initial_q = quaternion_from_euler(0,0,0)
@@ -44,7 +44,7 @@ class NavToWaypointServerNode(Node):
         self.get_logger().info("Received a goal")
 
         # Validate the goal request
-        if goal_request.waypoint.position.x >= 20 or goal_request.waypoint.position.x <= -20 or goal_request.waypoint.position.y >= 20 or goal_request.waypoint.position.y <= -20:
+        if goal_request.waypoint.position.x >= 530 or goal_request.waypoint.position.x <= 20 or goal_request.waypoint.position.y >= 370 or goal_request.waypoint.position.y <= 0:
             self.get_logger().info("Rejecting the goal")
             return GoalResponse.REJECT
         
@@ -88,11 +88,11 @@ class NavToWaypointServerNode(Node):
                 return result
             dist = [target_pose.position.x-self.current_position.position.x, target_pose.position.y-self.current_position.position.y]
 
-            if (dist[0] >= 0.1):
-                self.current_position.position.x += 0.2 * dist[0]
-            if (dist[1] >= 0.1):
-                self.current_position.position.y += 0.2 * dist[1]
-            if (dist[0] < 0.1 and dist[1] < 0.1):
+            if (dist[0] >= 0.1 or dist[0] <= -0.1):
+                self.current_position.position.x += 0.5 * dist[0]
+            if (dist[1] >= 0.1 or dist[1] <= -0.1):
+                self.current_position.position.y += 0.5 * dist[1]
+            if (dist[0] < 0.1 and dist[0] > -0.1 and dist[1] < 0.1 and dist[1] > -0.1):
                 break
             
             feedback.current_position.pose.position.x = self.current_position.position.x
