@@ -10,22 +10,26 @@ from lhd_msgs.action import NavToWaypoint
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup
 from geometry_msgs.msg import Pose
-from tf_transformations import quaternion_from_euler
+from tf_transformations import quaternion_from_euler, euler_from_quaternion
 
 class NavToWaypointServerNode(Node):
     def __init__(self):
+        self.current_pose = Pose()
+        self.current_pose.position.x = 119.0
+        self.current_pose.position.y = 111.0
+        self.current_pose.position.z = 0.0
         
-        self.current_position = Pose()
-        self.current_position.position.x = 119.0
-        self.current_position.position.y = 111.0
-        self.current_position.position.z = 0.0
+        self.trajectory_remaining = []
+        self.current_trajectory = []
         
         initial_q = quaternion_from_euler(0,0,0)
         
-        self.current_position.orientation.x = initial_q[0]
-        self.current_position.orientation.y = initial_q[1]
-        self.current_position.orientation.z = initial_q[2]
-        self.current_position.orientation.w = initial_q[3]
+        self.current_pose.orientation.x = initial_q[0]
+        self.current_pose.orientation.y = initial_q[1]
+        self.current_pose.orientation.z = initial_q[2]
+        self.current_pose.orientation.w = initial_q[3]
+        
+        self.starting_pose = self.current_pose
         
         super().__init__("count_until_server")
         self.goal_handle_: ServerGoalHandle = None
@@ -44,7 +48,7 @@ class NavToWaypointServerNode(Node):
         self.get_logger().info("Received a goal")
 
         # Validate the goal request
-        if goal_request.waypoint.position.x >= 530 or goal_request.waypoint.position.x <= 20 or goal_request.waypoint.position.y >= 370 or goal_request.waypoint.position.y <= 0:
+        if not goal_request.waypoints:
             self.get_logger().info("Rejecting the goal")
             return GoalResponse.REJECT
         
@@ -67,14 +71,21 @@ class NavToWaypointServerNode(Node):
             self.goal_handle_ = goal_handle
         
         # Get request from goal
-        target_pose = goal_handle.request.waypoint
+        # target_pose = goal_handle.request.waypoint
+        self.current_trajectory=[]
+        for pose in goal_handle.request.waypoints.poses:
+            x = pose.position.x
+            y = pose.position.y
+            q = (pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w)
+            _, _, theta = euler_from_quaternion(q)
+            self.current_trajectory.append([x, y, theta])
 
         # Execute the action
         self.get_logger().info("Executing the goal")
         feedback = NavToWaypoint.Feedback()
         result = NavToWaypoint.Result()
         
-        
+        self.trajectory_remaining = self.current_trajectory
         while(True):
             if not goal_handle.is_active:
                 result.time_taken = time.time() - start_time
@@ -86,20 +97,18 @@ class NavToWaypointServerNode(Node):
                 result.time_taken = time.time() - start_time
                 # self.process_next_goal_in_queue()
                 return result
-            dist = [target_pose.position.x-self.current_position.position.x, target_pose.position.y-self.current_position.position.y]
-
-            if (dist[0] >= 0.1 or dist[0] <= -0.1):
-                self.current_position.position.x += 0.5 * dist[0]
-            if (dist[1] >= 0.1 or dist[1] <= -0.1):
-                self.current_position.position.y += 0.5 * dist[1]
-            if (dist[0] < 0.1 and dist[0] > -0.1 and dist[1] < 0.1 and dist[1] > -0.1):
+            if not self.trajectory_remaining:
+                self.get_logger().info("Trajectory complete.")
                 break
             
-            feedback.current_position.pose.position.x = self.current_position.position.x
-            feedback.current_position.pose.position.y = self.current_position.position.y
-            # feedback.current_position.pose.position.x = self.current_position.position.x
+            current_waypoint = self.trajectory_remaining.pop(0)
+            x, y, theta = current_waypoint
+            
+            feedback.current_x_y_theta.data = [x, y ,theta]
+            
             goal_handle.publish_feedback(feedback)
-            time.sleep(0.2)
+            
+            time.sleep(0.02)
 
         # Once done, set goal final state
         goal_handle.succeed()

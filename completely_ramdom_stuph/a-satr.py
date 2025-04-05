@@ -105,7 +105,7 @@ def main():
     goal = (end_y, end_x)  # (y, x) goal position in pixels
     buffer_size = 5  # Buffer around obstacles
 
-    cost_map = load_and_threshold(image_path, buffer_size=buffer_size)
+    cost_map = load_and_threshold(image_path)
 
     path = a_star(cost_map, start, goal)
 

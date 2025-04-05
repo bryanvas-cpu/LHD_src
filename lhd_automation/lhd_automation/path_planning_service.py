@@ -4,11 +4,14 @@ from rclpy.node import Node
 from geometry_msgs.msg import Pose
 from std_msgs.msg import Int32MultiArray
 from lhd_msgs.srv import GetWaypoints
+from tf_transformations import quaternion_from_euler
+from geometry_msgs.msg import Quaternion
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw
 import random
 import heapq
+import math
 
 def visualize_path(image_path, path):
     """Visualizes the path on the original image."""
@@ -76,6 +79,9 @@ def heuristic(a, b):
     """Heuristic function (Manhattan distance)."""
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
+def yaw_to_quaternion(yaw):
+    q = quaternion_from_euler(0, 0, yaw)
+    return Quaternion(x=q[0], y=q[1], z=q[2], w=q[3])
 
 class WayPoints(Node):
 
@@ -105,10 +111,25 @@ class WayPoints(Node):
             if path:
                 print("Path found!")
                 response.waypoints.poses = [Pose() for _ in path]
-                for i, point in enumerate(path):
-                    response.waypoints.poses[i].position.x = float(point[0])
-                    response.waypoints.poses[i].position.y = float(point[1])
-                    # response.waypoints.poses[i].position.z = float(point[2])
+                for i in range(len(path)):
+                    x, y = float(path[i][1]), float(path[i][0])
+                    response.waypoints.poses[i].position.x = x
+                    response.waypoints.poses[i].position.y = y
+
+                    if i < len(path) - 1:
+                        dx = path[i + 1][0] - path[i][0]
+                        dy = path[i + 1][1] - path[i][1]
+                        # minus, cuz y axiz is inverted in image, compared to robot frame in sim
+                        yaw = -math.atan2(dy, dx)
+                    else:
+                        # Last pose: use the yaw of the previous segment
+                        dx = path[i][0] - path[i - 1][0]
+                        dy = path[i][1] - path[i - 1][1]
+                        # minus, cuz y axiz is inverted in image, compared to robot frame in sim
+                        yaw = -math.atan2(dy, dx)
+
+                    quat = yaw_to_quaternion(yaw)
+                    response.waypoints.poses[i].orientation = quat
                 visualize_path(self.original_image_path, path)
                 return response
             else:

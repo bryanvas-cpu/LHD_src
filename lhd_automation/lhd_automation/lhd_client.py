@@ -5,17 +5,19 @@ from rclpy.action import ActionClient
 from rclpy.action.client import ClientGoalHandle, GoalStatus
 from lhd_msgs.action import NavToWaypoint
 from lhd_msgs.srv import GetWaypoints
-from geometry_msgs.msg import Pose
+from geometry_msgs.msg import PoseArray, Pose
 import cv2
 
 class NavToWaypointClientNode(Node):
     def __init__(self):
         super().__init__("count_until_client")
-        self.goals = []
-        self.goal_index = 0
-
+        self.starting_x = 119
+        self.starting_y = 111
+        self.starting_theta = 0
+        
         self.current_x = 119
         self.current_y = 111
+        self.current_theta = 0
         
         self.action_client = ActionClient(self, NavToWaypoint, "nav_to_waypoint")
         self.waypoints_client = self.create_client(GetWaypoints,"waypoints")
@@ -23,14 +25,25 @@ class NavToWaypointClientNode(Node):
         while not self.waypoints_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
 
-    def send_goal(self, x, y):
+    def send_goal(self, response: GetWaypoints.Response):
         # Wait for the server
         self.action_client.wait_for_server()
-
-        # Create a goal
+        
+        trajectory = response.waypoints.poses
+        header = response.waypoints.header
+        
+        # Create and populate the goal
         goal = NavToWaypoint.Goal()
-        goal.waypoint.position.x = x
-        goal.waypoint.position.y = y
+        goal.waypoints = PoseArray()
+        goal.waypoints.header = header
+        
+        transformed_poses = []
+        for pose in trajectory:
+            real_pose = self.convert_to_real_pose(pose)
+            # real_pose = pose
+            transformed_poses.append(real_pose)
+
+        goal.waypoints.poses = transformed_poses
 
         # Send the goal
         self.get_logger().info("Sending goal")
@@ -56,22 +69,19 @@ class NavToWaypointClientNode(Node):
         result = future.result().result
         if status == GoalStatus.STATUS_SUCCEEDED:
             self.get_logger().info("Success")
+            self.get_logger().info("Got feedback: x: " + str(self.current_x) + " y: " + str(self.current_y) + " theta: " + str(self.current_theta))
         elif status == GoalStatus.STATUS_ABORTED:
             self.get_logger().error("Aborted")
         elif status == GoalStatus.STATUS_CANCELED:
             self.get_logger().warn("Canceled")
         self.get_logger().info("Result: " + str(result.time_taken))
         
-        self.goal_index += 1
-        if self.goal_index < len(self.goals):
-            self.send_goal(self.goals[self.goal_index][0],self.goals[self.goal_index][1])
-        else:
-            self.get_logger().info('All waypoints have been reached successfully')     
-
     def goal_feedback_callback(self, feedback_msg):
-        position = [feedback_msg.feedback.current_position.pose.position.x, feedback_msg.feedback.current_position.pose.position.y]
-        self.get_logger().info("Got feedback: " + str(position[0]) + " " + str(position[1]))
-
+        pose_data = feedback_msg.feedback.current_x_y_theta.data
+        pose = self.convert_to_pixel_pose(pose_data)
+        # pose = pose_data
+        self.current_x, self.current_y, self.current_theta = pose[0], pose[1], pose[2]
+        self.get_logger().info("Got feedback: x: " + str(pose[0]) + " y: " + str(pose[1]) + " theta: " + str(pose[2]))
 
     def send_request(self, start_x, start_y, end_x, end_y):
 
@@ -86,20 +96,29 @@ class NavToWaypointClientNode(Node):
             rclpy.spin_until_future_complete(self, future)
             self.get_logger().info("received future")
             return future
-    
+        
+    def convert_to_real_pose(self, pose: Pose):
+        real_pose = Pose()
+        real_pose = pose
+        real_pose.position.x = (pose.position.x - self.starting_x)*(15.0/298.0)
+        real_pose.position.y = -(pose.position.y - self.starting_y)*(15.0/298.0)
+        # minus since y axis of photo is inverted
+        return real_pose
+    def convert_to_pixel_pose(self, pose):
+        pixel_pose = pose
+        pixel_pose[0] = pose[0]*(298.0/15.0) + self.starting_x
+        pixel_pose[1] = -pose[1]*(298.0/15.0) + self.starting_y
+        # minus since y axis of photo is inverted
+        return pixel_pose
+
 def click_callback(event, x, y, flags, param):
     """ Callback for mouse click to capture coordinates """
     if event == cv2.EVENT_LBUTTONDOWN:
-        print(f"Clicked at: ({x}, {y})")
+        print(f"\ngoing from: ({param.current_x}, {param.current_y}) to ({x}, {y})")
         future = param.send_request(param.current_x, param.current_y, x, y)
         response = future.result()
         param.get_logger().info(f"Waypoints received by the action client{response}")
-        for pose in response.waypoints.poses:
-            waypoints = [pose.position.x, pose.position.y, 0]
-            param.goals.append(waypoints)
-            param.get_logger().info(f'Waypoints: {waypoints}')
-        param.send_goal(param.goals[0][0], param.goals[0][1])  # Send clicked coordinates to ROS 2 action server
-
+        param.send_goal(response)
 
 def main(args=None):
     rclpy.init(args=args)
