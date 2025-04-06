@@ -88,7 +88,7 @@ class WayPoints(Node):
     def __init__(self):
         super().__init__('waypoints_service')
         self.paths = []
-        self.image_path = "/home/bryan/lhd_ws/src/lhd_mapping/maps/mine/cost_map_kernel_51.png"
+        self.image_path = "/home/bryan/lhd_ws/src/lhd_mapping/maps/mine/cost_map_kernel_25.png"
         self.original_image_path = "/home/bryan/lhd_ws/src/lhd_mapping/maps/mine/mine_gimp.png"
         self.cost_map = cv2.imread(self.image_path)
         self.cost_map = cv2.cvtColor(self.cost_map, cv2.COLOR_BGR2GRAY)
