@@ -10,3 +10,7 @@ twist_mux:
         topic   : key_vel
         timeout : 0.1
         priority: 90
+      autonomous: 
+        topic   : auto_vel
+        timeout : 0.1
+        priority: 96

@@ -46,67 +46,8 @@ def generate_launch_description():
         }.items()
     )
 
-    # safety_stop = Node(
-    #     package="lhd_utils",
-    #     executable="safety_stop",
-    #     output="screen",
-    #     parameters=[{"use_sim_time": True}]
-    # )
-
-    # localization = IncludeLaunchDescription(
-    #     os.path.join(
-    #         get_package_share_directory("lhd_localization"),
-    #         "launch",
-    #         "global_localization.launch.py"
-    #     ),
-    #     condition=UnlessCondition(use_slam)
-    # )
-
-    # slam = IncludeLaunchDescription(
-    #     os.path.join(
-    #         get_package_share_directory("lhd_mapping"),
-    #         "launch",
-    #         "slam.launch.py"
-    #     ),
-    #     condition=IfCondition(use_slam)
-    # )
-
-    # rviz_localization = Node(
-    #     package="rviz2",
-    #     executable="rviz2",
-    #     arguments=["-d", os.path.join(
-    #             get_package_share_directory("lhd_localization"),
-    #             "rviz",
-    #             "global_localization.rviz"
-    #         )
-    #     ],
-    #     output="screen",
-    #     parameters=[{"use_sim_time": True}],
-    #     condition=UnlessCondition(use_slam)
-    # )
-
-    # rviz_slam = Node(
-    #     package="rviz2",
-    #     executable="rviz2",
-    #     arguments=["-d", os.path.join(
-    #             get_package_share_directory("lhd_mapping"),
-    #             "rviz",
-    #             "slam.rviz"
-    #         )
-    #     ],
-    #     output="screen",
-    #     parameters=[{"use_sim_time": True}],
-    #     condition=IfCondition(use_slam)
-    # )
-    
     return LaunchDescription([
-        # use_slam_arg,
         gazebo,
         controller,
         joystick,
-        # safety_stop,
-        # localization,
-        # slam,
-        # rviz_localization,
-        # rviz_slam
     ])

@@ -16,7 +16,7 @@ def load_and_threshold(image_path):
     _, thresh = cv2.threshold(gray, 206,255,cv2.THRESH_BINARY)
     cv2.imshow("thresh",thresh)
 
-    blurred_image = cv2.GaussianBlur(thresh, (25, 25), 0)
+    blurred_image = cv2.GaussianBlur(thresh, (41, 41), 0)
     cv2.imshow("blurred_image",blurred_image)
     
     cost_map = np.where(thresh == 0, 0, blurred_image)

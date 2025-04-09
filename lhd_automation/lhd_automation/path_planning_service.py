@@ -12,12 +12,25 @@ from PIL import Image, ImageDraw
 import random
 import heapq
 import math
+from scipy.interpolate import splprep, splev
+
+def smooth_path(path, num_points=100):
+    path = np.array(path)
+    y, x = path[:, 0], path[:, 1]  # remember: (y, x)
+
+    # Fit spline
+    tck, _ = splprep([x, y], s=2.0)
+    u_fine = np.linspace(0, 1, num_points)
+    x_fine, y_fine = splev(u_fine, tck)
+
+    return list(zip(y_fine, x_fine))  # back to (y, x)
 
 def visualize_path(image_path, path):
     """Visualizes the path on the original image."""
     image = cv2.imread(image_path)
     for (x, y) in path:
-        image[x, y] = (0, 0, 255)  # Red color for path
+        ix, iy = int(x), int(y) 
+        image[ix, iy] = (0, 0, 255)  # Red color for path
     cv2.imshow("Path", image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
@@ -86,9 +99,9 @@ def yaw_to_quaternion(yaw):
 class WayPoints(Node):
 
     def __init__(self):
-        super().__init__('waypoints_service')
+        super().__init__('path_planning_service')
         self.paths = []
-        self.image_path = "/home/bryan/lhd_ws/src/lhd_mapping/maps/mine/cost_map_kernel_25.png"
+        self.image_path = "/home/bryan/lhd_ws/src/lhd_mapping/maps/mine/cost_map_kernel_31.png"
         self.original_image_path = "/home/bryan/lhd_ws/src/lhd_mapping/maps/mine/mine_gimp.png"
         self.cost_map = cv2.imread(self.image_path)
         self.cost_map = cv2.cvtColor(self.cost_map, cv2.COLOR_BGR2GRAY)
@@ -107,9 +120,18 @@ class WayPoints(Node):
             goal = (end_y, end_x)  # (y, x) goal position in pixels
 
             path = a_star(self.cost_map, start, goal)
+            if len(path) <= 25:
+                self.get_logger().warn("Path has 20 or fewer waypoints. Rejecting request.")
+                response.success = False  # Assuming you have a `success` field in the response
+                # response.message = "Path too short. Must have more than 20 waypoints."
+                return response
+            
+            # Skip the first 20 waypoints
+            # path = path[10:]
             
             if path:
                 print("Path found!")
+                smoothed_path = smooth_path(path, num_points=100)
                 response.waypoints.poses = [Pose() for _ in path]
                 for i in range(len(path)):
                     x, y = float(path[i][1]), float(path[i][0])
@@ -117,26 +139,31 @@ class WayPoints(Node):
                     response.waypoints.poses[i].position.y = y
 
                     if i < len(path) - 1:
-                        dx = path[i + 1][0] - path[i][0]
-                        dy = path[i + 1][1] - path[i][1]
+                        dy = path[i + 1][0] - path[i][0]
+                        dx = path[i + 1][1] - path[i][1]
                         # minus, cuz y axiz is inverted in image, compared to robot frame in sim
-                        yaw = -math.atan2(dy, dx)
+                        yaw = math.atan2(-dy, dx)
+                        self.get_logger().info(f"dx,dy,yaw: {dx:.2f}, {dy:.2f}, {yaw:.2f}")
                     else:
                         # Last pose: use the yaw of the previous segment
                         dx = path[i][0] - path[i - 1][0]
                         dy = path[i][1] - path[i - 1][1]
                         # minus, cuz y axiz is inverted in image, compared to robot frame in sim
-                        yaw = -math.atan2(dy, dx)
+                        yaw = math.atan2(-dy, dx)
+                        self.get_logger().info(f"dx,dy,yaw: {dx:.2f}, {dy:.2f}, {yaw:.2f}")
 
                     quat = yaw_to_quaternion(yaw)
                     response.waypoints.poses[i].orientation = quat
                 visualize_path(self.original_image_path, path)
+                response.success = True
                 return response
             else:
                 print("No path found.")
+                response.success = False
                 return response
         else:
             self.get_logger().info("Request rejected")
+            response.success = False
             return response
 
 def main():

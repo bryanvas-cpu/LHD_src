@@ -10,7 +10,7 @@ import cv2
 
 class NavToWaypointClientNode(Node):
     def __init__(self):
-        super().__init__("count_until_client")
+        super().__init__("lhd_client")
         self.starting_x = 119
         self.starting_y = 111
         self.starting_theta = 0
@@ -81,7 +81,7 @@ class NavToWaypointClientNode(Node):
         pose = self.convert_to_pixel_pose(pose_data)
         # pose = pose_data
         self.current_x, self.current_y, self.current_theta = pose[0], pose[1], pose[2]
-        self.get_logger().info("Got feedback: x: " + str(pose[0]) + " y: " + str(pose[1]) + " theta: " + str(pose[2]))
+        # self.get_logger().info("Got feedback: x: " + str(pose[0]) + " y: " + str(pose[1]) + " theta: " + str(pose[2]))
 
     def send_request(self, start_x, start_y, end_x, end_y):
 
@@ -117,8 +117,11 @@ def click_callback(event, x, y, flags, param):
         print(f"\ngoing from: ({param.current_x}, {param.current_y}) to ({x}, {y})")
         future = param.send_request(param.current_x, param.current_y, x, y)
         response = future.result()
-        param.get_logger().info(f"Waypoints received by the action client{response}")
-        param.send_goal(response)
+        if response.success == True:
+            param.get_logger().info(f"Waypoints received by the action client{response}")
+            param.send_goal(response)
+        else:
+            param.get_logger().info("request_rejected")
 
 def main(args=None):
     rclpy.init(args=args)

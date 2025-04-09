@@ -9,10 +9,10 @@ class DiffDriveNMPC:
         self.nu = 2
 
         self.Q = np.diag([1.0, 1.0, 0.05])
-        self.R = np.diag([0.1, 0.2])
+        self.R = np.diag([0.08, 0.09])
 
-        self.v_max = 0.5
-        self.v_min = -0.5
+        self.v_max = 0.2
+        self.v_min = -0.2
         self.omega_max = np.pi / 4
         self.omega_min = -np.pi / 4
 

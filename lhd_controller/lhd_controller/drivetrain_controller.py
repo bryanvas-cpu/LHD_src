@@ -134,7 +134,7 @@ class DrivetrainController(Node):
         # self.get_logger().info("\n  joints %.4f %.4f %.4f %.4f%.4f\n " % (msg.position[0], msg.position[1], msg.position[2], msg.position[3], msg.position[4]))
         # print("Callback triggered!")
         # print(msg)
-        self.get_logger().info("\n x,y %.4f, %.4f \n " % (self.x_, self.y_))
+        # self.get_logger().info("\n x,y %.4f, %.4f \n " % (self.x_, self.y_))
 
         
         # Compose and publish the odom message
