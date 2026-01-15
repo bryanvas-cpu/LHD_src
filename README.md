@@ -22,7 +22,7 @@ Each layer is designed to preserve modularity while contributing to globally smo
 ## 🧩 Path Planning & Obstacle Avoidance
 
 **File:**  
-`lhd_automation/lhd_automation/path_planning_service.py`
+[`lhd_automation/lhd_automation/path_planning_service.py`](lhd_automation/lhd_automation/path_planning_service.py)
 
 ### Key Features
 - Uses **A\*** search on an **8-bit costmap**
@@ -47,6 +47,9 @@ After planning, the discrete waypoint path is refined using **spline-based smoot
 Fits a smooth spline curve through a given (y, x) path and resamples it into a fixed number of evenly spaced points.  
 This removes sharp turns and produces a continuous, smooth trajectory suitable for motion planning and visualization.
 
+### Visualization
+![Path Smoothing](Images/path_smoothing.png)
+
 ### Outcome
 A **continuous, differentiable trajectory** that is well-suited for:
 - Predictive control
@@ -58,7 +61,7 @@ A **continuous, differentiable trajectory** that is well-suited for:
 ## 🎯 Trajectory Tracking — Nonlinear MPC
 
 **File:**  
-`lhd_automation/lhd_automation/MPC_diff_drive_class.py`
+[`lhd_automation/lhd_automation/MPC_diff_drive_class.py`](lhd_automation/lhd_automation/MPC_diff_drive_class.py)
 
 ### Controller Details
 - **Controller Type:** Nonlinear Model Predictive Control (NMPC)
