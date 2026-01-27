@@ -1,0 +1,64 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bryan/lhd_ws/src/build/lhd_description
+-- Install configuration: ""
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/launch
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/launch/gazebo.launch.py
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/launch/display.launch.py
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/base_link.STL
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/mine_Y_fig.stl
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/arm.STL
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/bucket.STL
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/brw.STL
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/front.STL
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/blw.STL
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/flw.STL
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/meshes/frw.STL
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/models
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/urdf
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/urdf/mine.urdf.xacro
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/urdf/lhd.urdf.xacro
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/urdf/lhd_ros2_control.xacro
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/urdf/mine_gazebo.xacro
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/urdf/lhd_gazebo.xacro
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/rviz
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/rviz/lhd.rviz
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/rviz/slam_setup.rviz
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/worlds
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/ament_index/resource_index/package_run_dependencies/lhd_description
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/ament_index/resource_index/parent_prefix_path/lhd_description
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/environment/ament_prefix_path.sh
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/environment/ament_prefix_path.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/environment/path.sh
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/environment/path.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/local_setup.bash
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/local_setup.sh
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/local_setup.zsh
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/local_setup.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/ament_index/resource_index/packages/lhd_description
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/cmake/lhd_descriptionConfig.cmake
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/cmake/lhd_descriptionConfig-version.cmake
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.xml

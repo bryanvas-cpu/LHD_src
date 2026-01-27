@@ -1,0 +1,44 @@
+Built target ament_cmake_python_copy_lhd_automation
+running egg_info
+writing lhd_automation.egg-info/PKG-INFO
+writing dependency_links to lhd_automation.egg-info/dependency_links.txt
+writing top-level names to lhd_automation.egg-info/top_level.txt
+reading manifest file 'lhd_automation.egg-info/SOURCES.txt'
+writing manifest file 'lhd_automation.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_lhd_automation_egg
+-- Install configuration: ""
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/environment/pythonpath.sh
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/environment/pythonpath.dsv
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation-0.0.0-py3.10.egg-info
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation-0.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation-0.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation/lhd_client.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation/__init__.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation/path_planning_service.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation/lhd_server.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation/MPC_diff_drive_class.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation/automation_ros_lhd_mpc.zip
+Listing '/home/bryan/lhd_ws/src/install/lhd_automation/local/lib/python3.10/dist-packages/lhd_automation'...
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/lib/lhd_automation/lhd_client.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/lib/lhd_automation/lhd_server.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/lib/lhd_automation/path_planning_service.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/launch
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/launch/autonomous_robot.launch.py
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/ament_index/resource_index/package_run_dependencies/lhd_automation
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/ament_index/resource_index/parent_prefix_path/lhd_automation
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/environment/ament_prefix_path.sh
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/environment/path.sh
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/environment/path.dsv
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/local_setup.bash
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/local_setup.sh
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/local_setup.zsh
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/local_setup.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.dsv
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/ament_index/resource_index/packages/lhd_automation
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/cmake/lhd_automationConfig.cmake
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/cmake/lhd_automationConfig-version.cmake
+-- Up-to-date: /home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.xml

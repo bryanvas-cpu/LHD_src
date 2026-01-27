@@ -1,0 +1,36 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bryan/lhd_ws/src/build/lhd_bringup
+-- Install configuration: ""
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/config
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/launch
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/launch/simulated_robot.launch.py
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/ament_index/resource_index/package_run_dependencies/lhd_bringup
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/ament_index/resource_index/parent_prefix_path/lhd_bringup
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/environment/ament_prefix_path.sh
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/environment/ament_prefix_path.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/environment/path.sh
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/environment/path.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/local_setup.bash
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/local_setup.sh
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/local_setup.zsh
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/local_setup.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.dsv
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/ament_index/resource_index/packages/lhd_bringup
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/cmake/lhd_bringupConfig.cmake
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/cmake/lhd_bringupConfig-version.cmake
+-- Installing: /home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.xml

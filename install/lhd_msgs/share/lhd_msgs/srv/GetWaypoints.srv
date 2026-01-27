@@ -1,0 +1,7 @@
+#request
+geometry_msgs/Pose start
+geometry_msgs/Pose end
+---
+#response
+geometry_msgs/PoseArray waypoints
+bool success

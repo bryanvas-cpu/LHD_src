@@ -1,0 +1,571 @@
+[0.067s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.067s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x772dc145e830>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x772dc15bb700>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x772dc15bb700>>, mixin_verb=('build',))
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.212s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/bryan/lhd_ws/src'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['ignore', 'ignore_ament_install']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'ignore'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'ignore_ament_install'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'ros'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['cmake', 'python']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'cmake'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'python'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extensions ['python_setup_py']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(Images) by extension 'python_setup_py'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extension 'ignore_ament_install'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extensions ['colcon_pkg']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extension 'colcon_pkg'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extensions ['colcon_meta']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extension 'colcon_meta'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extensions ['ros']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extension 'ros'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extensions ['cmake', 'python']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extension 'cmake'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extension 'python'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extensions ['python_setup_py']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(completely_ramdom_stuph) by extension 'python_setup_py'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extension 'ignore_ament_install'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extensions ['colcon_pkg']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extension 'colcon_pkg'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extensions ['colcon_meta']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extension 'colcon_meta'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extensions ['ros']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_automation) by extension 'ros'
+[0.224s] DEBUG:colcon.colcon_core.package_identification:Package 'lhd_automation' with type 'ros.ament_cmake' and name 'lhd_automation'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extension 'ignore_ament_install'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extensions ['colcon_pkg']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extension 'colcon_pkg'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extensions ['colcon_meta']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extension 'colcon_meta'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extensions ['ros']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_bringup) by extension 'ros'
+[0.224s] DEBUG:colcon.colcon_core.package_identification:Package 'lhd_bringup' with type 'ros.ament_cmake' and name 'lhd_bringup'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extension 'ignore'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extension 'ignore_ament_install'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extensions ['colcon_pkg']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extension 'colcon_pkg'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extensions ['colcon_meta']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extension 'colcon_meta'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extensions ['ros']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_controller) by extension 'ros'
+[0.225s] DEBUG:colcon.colcon_core.package_identification:Package 'lhd_controller' with type 'ros.ament_cmake' and name 'lhd_controller'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extensions ['ignore', 'ignore_ament_install']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_description) by extension 'ros'
+[0.228s] DEBUG:colcon.colcon_core.package_identification:Package 'lhd_description' with type 'ros.ament_cmake' and name 'lhd_description'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_localization) by extension 'ros'
+[0.228s] DEBUG:colcon.colcon_core.package_identification:Package 'lhd_localization' with type 'ros.ament_cmake' and name 'lhd_localization'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_mapping) by extension 'ros'
+[0.229s] DEBUG:colcon.colcon_core.package_identification:Package 'lhd_mapping' with type 'ros.ament_cmake' and name 'lhd_mapping'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(lhd_msgs) by extension 'ros'
+[0.230s] DEBUG:colcon.colcon_core.package_identification:Package 'lhd_msgs' with type 'ros.ament_cmake' and name 'lhd_msgs'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extension 'ignore_ament_install'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extensions ['colcon_pkg']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extension 'colcon_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extensions ['colcon_meta']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extension 'colcon_meta'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extensions ['ros']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extension 'ros'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extensions ['cmake', 'python']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extension 'cmake'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extension 'python'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extensions ['python_setup_py']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(pdf_explanation) by extension 'python_setup_py'
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.245s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/bryan/lhd_ws/install
+[0.245s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/bryan/uros_ws/install
+[0.245s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/bryan/hexapod_ws/install
+[0.246s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/bryan/turtlesim_ws/install
+[0.246s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /home/bryan/bumperbot_ws/install
+[0.247s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 497 installed packages in /opt/ros/humble
+[0.249s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'cmake_target' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'lhd_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.278s] DEBUG:colcon.colcon_core.verb:Building package 'lhd_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/lhd_ws/src/build/lhd_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/lhd_ws/src/install/lhd_controller', 'merge_install': False, 'path': '/home/bryan/lhd_ws/src/lhd_controller', 'symlink_install': False, 'test_result_base': None}
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'cmake_target' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.279s] DEBUG:colcon.colcon_core.verb:Building package 'lhd_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/lhd_ws/src/build/lhd_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/lhd_ws/src/install/lhd_description', 'merge_install': False, 'path': '/home/bryan/lhd_ws/src/lhd_description', 'symlink_install': False, 'test_result_base': None}
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'cmake_target' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.279s] DEBUG:colcon.colcon_core.verb:Building package 'lhd_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/lhd_ws/src/build/lhd_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/lhd_ws/src/install/lhd_localization', 'merge_install': False, 'path': '/home/bryan/lhd_ws/src/lhd_localization', 'symlink_install': False, 'test_result_base': None}
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'cmake_target' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'cmake_clean_cache' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'cmake_clean_first' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'cmake_force_configure' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'ament_cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'catkin_cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'lhd_mapping' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.279s] DEBUG:colcon.colcon_core.verb:Building package 'lhd_mapping' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/lhd_ws/src/build/lhd_mapping', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/lhd_ws/src/install/lhd_mapping', 'merge_install': False, 'path': '/home/bryan/lhd_ws/src/lhd_mapping', 'symlink_install': False, 'test_result_base': None}
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'cmake_target' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.280s] DEBUG:colcon.colcon_core.verb:Building package 'lhd_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/lhd_ws/src/build/lhd_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/lhd_ws/src/install/lhd_msgs', 'merge_install': False, 'path': '/home/bryan/lhd_ws/src/lhd_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'cmake_target' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'cmake_clean_first' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'cmake_force_configure' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'ament_cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_automation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.280s] DEBUG:colcon.colcon_core.verb:Building package 'lhd_automation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/lhd_ws/src/build/lhd_automation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/lhd_ws/src/install/lhd_automation', 'merge_install': False, 'path': '/home/bryan/lhd_ws/src/lhd_automation', 'symlink_install': False, 'test_result_base': None}
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'cmake_target' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'lhd_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.280s] DEBUG:colcon.colcon_core.verb:Building package 'lhd_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bryan/lhd_ws/src/build/lhd_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bryan/lhd_ws/src/install/lhd_bringup', 'merge_install': False, 'path': '/home/bryan/lhd_ws/src/lhd_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.280s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.281s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.281s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/lhd_ws/src/lhd_controller' with build type 'ament_cmake'
+[0.282s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/lhd_ws/src/lhd_controller'
+[0.283s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.283s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.286s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/lhd_ws/src/lhd_description' with build type 'ament_cmake'
+[0.286s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/lhd_ws/src/lhd_description'
+[0.286s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.287s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.290s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/lhd_ws/src/lhd_msgs' with build type 'ament_cmake'
+[0.290s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/lhd_ws/src/lhd_msgs'
+[0.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.294s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/lhd_ws/src/lhd_localization' with build type 'ament_cmake'
+[0.294s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/lhd_ws/src/lhd_localization'
+[0.294s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.294s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.297s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/lhd_ws/src/lhd_mapping' with build type 'ament_cmake'
+[0.297s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/lhd_ws/src/lhd_mapping'
+[0.297s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.297s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_controller -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_controller
+[0.306s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_description -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_description
+[0.307s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_msgs -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_msgs
+[0.309s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_localization -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_localization
+[0.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_mapping -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_mapping
+[1.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_description -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_description
+[1.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_description -- -j16 -l16
+[1.176s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_description -- -j16 -l16
+[1.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_description
+[1.199s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_description)
+[1.200s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_description
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description' for CMake module files
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description' for CMake config files
+[1.203s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_description', 'cmake_prefix_path')
+[1.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/hook/cmake_prefix_path.ps1'
+[1.204s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/hook/cmake_prefix_path.dsv'
+[1.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/hook/cmake_prefix_path.sh'
+[1.205s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description/bin'
+[1.205s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description/lib/pkgconfig/lhd_description.pc'
+[1.205s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description/lib/python3.10/site-packages'
+[1.205s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description/bin'
+[1.205s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.ps1'
+[1.206s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.dsv'
+[1.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.sh'
+[1.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.bash'
+[1.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.zsh'
+[1.207s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_description/share/colcon-core/packages/lhd_description)
+[1.208s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_description)
+[1.208s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description' for CMake module files
+[1.208s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description' for CMake config files
+[1.209s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_description', 'cmake_prefix_path')
+[1.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/hook/cmake_prefix_path.ps1'
+[1.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/hook/cmake_prefix_path.dsv'
+[1.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/hook/cmake_prefix_path.sh'
+[1.210s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description/bin'
+[1.210s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description/lib/pkgconfig/lhd_description.pc'
+[1.210s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description/lib/python3.10/site-packages'
+[1.210s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_description/bin'
+[1.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.ps1'
+[1.211s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.dsv'
+[1.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.sh'
+[1.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.bash'
+[1.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_description/share/lhd_description/package.zsh'
+[1.212s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_description/share/colcon-core/packages/lhd_description)
+[1.375s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_localization -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_localization
+[1.376s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_localization -- -j16 -l16
+[1.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_localization -- -j16 -l16
+[1.416s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_localization
+[1.427s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_localization)
+[1.427s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization' for CMake module files
+[1.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_localization
+[1.428s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization' for CMake config files
+[1.429s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_localization', 'cmake_prefix_path')
+[1.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/hook/cmake_prefix_path.ps1'
+[1.429s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/hook/cmake_prefix_path.dsv'
+[1.430s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/hook/cmake_prefix_path.sh'
+[1.430s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/lib'
+[1.431s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/bin'
+[1.431s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/lib/pkgconfig/lhd_localization.pc'
+[1.431s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/lib/python3.10/site-packages'
+[1.431s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/bin'
+[1.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.ps1'
+[1.432s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.dsv'
+[1.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.sh'
+[1.433s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.bash'
+[1.433s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.zsh'
+[1.433s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_localization/share/colcon-core/packages/lhd_localization)
+[1.434s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_localization)
+[1.434s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization' for CMake module files
+[1.434s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization' for CMake config files
+[1.434s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_localization', 'cmake_prefix_path')
+[1.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/hook/cmake_prefix_path.ps1'
+[1.435s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/hook/cmake_prefix_path.dsv'
+[1.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/hook/cmake_prefix_path.sh'
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/lib'
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/bin'
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/lib/pkgconfig/lhd_localization.pc'
+[1.436s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/lib/python3.10/site-packages'
+[1.436s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_localization/bin'
+[1.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.ps1'
+[1.436s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.dsv'
+[1.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.sh'
+[1.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.bash'
+[1.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.zsh'
+[1.437s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_localization/share/colcon-core/packages/lhd_localization)
+[1.537s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_controller -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_controller
+[1.539s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_controller -- -j16 -l16
+[1.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_mapping -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_mapping
+[1.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_mapping -- -j16 -l16
+[1.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_mapping -- -j16 -l16
+[1.849s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_mapping
+[1.910s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_mapping)
+[1.910s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_mapping
+[1.910s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping' for CMake module files
+[1.911s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping' for CMake config files
+[1.911s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_mapping', 'cmake_prefix_path')
+[1.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/hook/cmake_prefix_path.ps1'
+[1.911s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/hook/cmake_prefix_path.dsv'
+[1.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/hook/cmake_prefix_path.sh'
+[1.912s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping/bin'
+[1.912s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping/lib/pkgconfig/lhd_mapping.pc'
+[1.912s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping/lib/python3.10/site-packages'
+[1.912s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping/bin'
+[1.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.ps1'
+[1.913s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.dsv'
+[1.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.sh'
+[1.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.bash'
+[1.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.zsh'
+[1.914s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_mapping/share/colcon-core/packages/lhd_mapping)
+[1.914s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_mapping)
+[1.914s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping' for CMake module files
+[1.915s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping' for CMake config files
+[1.915s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_mapping', 'cmake_prefix_path')
+[1.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/hook/cmake_prefix_path.ps1'
+[1.915s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/hook/cmake_prefix_path.dsv'
+[1.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/hook/cmake_prefix_path.sh'
+[1.916s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping/bin'
+[1.916s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping/lib/pkgconfig/lhd_mapping.pc'
+[1.916s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping/lib/python3.10/site-packages'
+[1.916s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_mapping/bin'
+[1.916s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.ps1'
+[1.916s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.dsv'
+[1.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.sh'
+[1.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.bash'
+[1.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_mapping/share/lhd_mapping/package.zsh'
+[1.917s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_mapping/share/colcon-core/packages/lhd_mapping)
+[2.116s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_msgs -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_msgs
+[2.116s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_msgs -- -j16 -l16
+[5.334s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_msgs -- -j16 -l16
+[5.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_msgs
+[5.396s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_msgs)
+[5.396s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs' for CMake module files
+[5.397s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_msgs
+[5.397s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs' for CMake config files
+[5.398s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_msgs', 'cmake_prefix_path')
+[5.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/cmake_prefix_path.ps1'
+[5.399s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/cmake_prefix_path.dsv'
+[5.399s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/cmake_prefix_path.sh'
+[5.400s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/lib'
+[5.400s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_msgs', 'ld_library_path_lib')
+[5.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/ld_library_path_lib.ps1'
+[5.400s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/ld_library_path_lib.dsv'
+[5.401s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/ld_library_path_lib.sh'
+[5.401s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/bin'
+[5.401s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/lib/pkgconfig/lhd_msgs.pc'
+[5.401s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/lib/python3.10/site-packages'
+[5.401s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/bin'
+[5.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.ps1'
+[5.402s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.dsv'
+[5.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.sh'
+[5.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.bash'
+[5.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.zsh'
+[5.404s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_msgs/share/colcon-core/packages/lhd_msgs)
+[5.404s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_msgs)
+[5.405s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs' for CMake module files
+[5.405s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs' for CMake config files
+[5.405s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_msgs', 'cmake_prefix_path')
+[5.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/cmake_prefix_path.ps1'
+[5.406s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/cmake_prefix_path.dsv'
+[5.406s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/cmake_prefix_path.sh'
+[5.406s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/lib'
+[5.406s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_msgs', 'ld_library_path_lib')
+[5.406s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/ld_library_path_lib.ps1'
+[5.407s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/ld_library_path_lib.dsv'
+[5.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/hook/ld_library_path_lib.sh'
+[5.407s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/bin'
+[5.407s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/lib/pkgconfig/lhd_msgs.pc'
+[5.407s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/lib/python3.10/site-packages'
+[5.407s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_msgs/bin'
+[5.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.ps1'
+[5.408s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.dsv'
+[5.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.sh'
+[5.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.bash'
+[5.409s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_msgs/share/lhd_msgs/package.zsh'
+[5.409s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_msgs/share/colcon-core/packages/lhd_msgs)
+[5.409s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/lhd_ws/src/lhd_automation' with build type 'ament_cmake'
+[5.409s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/lhd_ws/src/lhd_automation'
+[5.409s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.409s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.422s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_automation': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble LD_LIBRARY_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_automation -- -j16 -l16
+[5.694s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_automation' returned '0': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble LD_LIBRARY_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_automation -- -j16 -l16
+[5.695s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_automation': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble LD_LIBRARY_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_automation
+[5.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_automation)
+[5.736s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation' for CMake module files
+[5.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_automation' returned '0': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble LD_LIBRARY_PATH=/home/bryan/lhd_ws/src/install/lhd_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_automation
+[5.737s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation' for CMake config files
+[5.737s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_automation', 'cmake_prefix_path')
+[5.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/hook/cmake_prefix_path.ps1'
+[5.738s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/hook/cmake_prefix_path.dsv'
+[5.738s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/hook/cmake_prefix_path.sh'
+[5.739s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/lib'
+[5.739s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/bin'
+[5.739s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/lib/pkgconfig/lhd_automation.pc'
+[5.739s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/lib/python3.10/site-packages'
+[5.739s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/bin'
+[5.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.ps1'
+[5.740s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.dsv'
+[5.740s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.sh'
+[5.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.bash'
+[5.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.zsh'
+[5.741s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_automation/share/colcon-core/packages/lhd_automation)
+[5.742s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_automation)
+[5.742s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation' for CMake module files
+[5.742s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation' for CMake config files
+[5.742s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_automation', 'cmake_prefix_path')
+[5.742s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/hook/cmake_prefix_path.ps1'
+[5.742s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/hook/cmake_prefix_path.dsv'
+[5.743s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/hook/cmake_prefix_path.sh'
+[5.743s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/lib'
+[5.743s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/bin'
+[5.743s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/lib/pkgconfig/lhd_automation.pc'
+[5.743s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/lib/python3.10/site-packages'
+[5.743s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_automation/bin'
+[5.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.ps1'
+[5.744s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.dsv'
+[5.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.sh'
+[5.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.bash'
+[5.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_automation/share/lhd_automation/package.zsh'
+[5.744s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_automation/share/colcon-core/packages/lhd_automation)
+[9.497s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_controller -- -j16 -l16
+[9.498s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_controller
+[9.543s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_controller)
+[9.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_controller
+[9.543s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller' for CMake module files
+[9.544s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller' for CMake config files
+[9.544s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_controller', 'cmake_prefix_path')
+[9.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/hook/cmake_prefix_path.ps1'
+[9.545s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/hook/cmake_prefix_path.dsv'
+[9.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/hook/cmake_prefix_path.sh'
+[9.546s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/lib'
+[9.546s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/bin'
+[9.546s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/lib/pkgconfig/lhd_controller.pc'
+[9.546s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/lib/python3.10/site-packages'
+[9.546s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/bin'
+[9.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.ps1'
+[9.547s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.dsv'
+[9.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.sh'
+[9.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.bash'
+[9.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.zsh'
+[9.548s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_controller/share/colcon-core/packages/lhd_controller)
+[9.548s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_controller)
+[9.548s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller' for CMake module files
+[9.548s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller' for CMake config files
+[9.549s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_controller', 'cmake_prefix_path')
+[9.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/hook/cmake_prefix_path.ps1'
+[9.549s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/hook/cmake_prefix_path.dsv'
+[9.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/hook/cmake_prefix_path.sh'
+[9.549s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/lib'
+[9.549s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/bin'
+[9.550s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/lib/pkgconfig/lhd_controller.pc'
+[9.550s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/lib/python3.10/site-packages'
+[9.550s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_controller/bin'
+[9.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.ps1'
+[9.550s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.dsv'
+[9.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.sh'
+[9.551s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.bash'
+[9.551s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_controller/share/lhd_controller/package.zsh'
+[9.551s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_controller/share/colcon-core/packages/lhd_controller)
+[9.551s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bryan/lhd_ws/src/lhd_bringup' with build type 'ament_cmake'
+[9.551s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bryan/lhd_ws/src/lhd_bringup'
+[9.552s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.552s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_bringup': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_controller/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_bringup -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_bringup
+[10.053s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_bringup' returned '0': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_controller/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_bringup -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_bringup
+[10.054s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_bringup': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_controller/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_bringup -- -j16 -l16
+[10.087s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_bringup' returned '0': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_controller/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_bringup -- -j16 -l16
+[10.088s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bryan/lhd_ws/src/build/lhd_bringup': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_controller/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_bringup
+[10.098s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_bringup)
+[10.098s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bryan/lhd_ws/src/build/lhd_bringup' returned '0': AMENT_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bryan/lhd_ws/src/install/lhd_description:/home/bryan/lhd_ws/src/install/lhd_controller:/home/bryan/bumperbot_ws/install/bumperbot_utils:/home/bryan/bumperbot_ws/install/bumperbot_cpp_examples:/home/bryan/bumperbot_ws/install/bumperbot_msgs:/home/bryan/bumperbot_ws/install/bumperbot_bringup:/home/bryan/bumperbot_ws/install/bumperbot_mapping:/home/bryan/bumperbot_ws/install/bumperbot_localization:/home/bryan/bumperbot_ws/install/bumperbot_firmware:/home/bryan/bumperbot_ws/install/bumperbot_description:/home/bryan/bumperbot_ws/install/bumperbot_controller:/home/bryan/lhd_ws/install/lhd_automation:/home/bryan/lhd_ws/install/lhd_msgs:/home/bryan/lhd_ws/install/lhd_mapping:/home/bryan/lhd_ws/install/lhd_localization:/home/bryan/lhd_ws/install/lhd_bringup:/home/bryan/lhd_ws/install/lhd_description:/home/bryan/lhd_ws/install/lhd_controller:/home/bryan/uros_ws/install/micro_ros_setup:/home/bryan/uros_ws/install/micro_ros_agent:/home/bryan/uros_ws/install/micro_ros_msgs:/home/bryan/hexapod_ws/install/serial_communicator:/home/bryan/hexapod_ws/install/hexapod_utils:/home/bryan/hexapod_ws/install/hexapod_kinematics:/home/bryan/hexapod_ws/install/hexapod_controller:/home/bryan/hexapod_ws/install/hexapod_interfaces:/home/bryan/hexapod_ws/install/hexapod_firmware:/home/bryan/hexapod_ws/install/hexapod_description:/home/bryan/hexapod_ws/install/hexapod_bringup:/home/bryan/turtlesim_ws/install/turtlesim:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble PYTHONPATH=/home/bryan/lhd_ws/src/install/lhd_controller/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_bringup
+[10.098s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup' for CMake module files
+[10.098s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup' for CMake config files
+[10.098s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_bringup', 'cmake_prefix_path')
+[10.099s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/hook/cmake_prefix_path.ps1'
+[10.099s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/hook/cmake_prefix_path.dsv'
+[10.099s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/hook/cmake_prefix_path.sh'
+[10.099s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup/bin'
+[10.100s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup/lib/pkgconfig/lhd_bringup.pc'
+[10.100s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup/lib/python3.10/site-packages'
+[10.100s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup/bin'
+[10.100s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.ps1'
+[10.100s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.dsv'
+[10.101s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.sh'
+[10.101s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.bash'
+[10.101s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.zsh'
+[10.101s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_bringup/share/colcon-core/packages/lhd_bringup)
+[10.101s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lhd_bringup)
+[10.102s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup' for CMake module files
+[10.102s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup' for CMake config files
+[10.102s] Level 1:colcon.colcon_core.shell:create_environment_hook('lhd_bringup', 'cmake_prefix_path')
+[10.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/hook/cmake_prefix_path.ps1'
+[10.102s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/hook/cmake_prefix_path.dsv'
+[10.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/hook/cmake_prefix_path.sh'
+[10.103s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup/bin'
+[10.103s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup/lib/pkgconfig/lhd_bringup.pc'
+[10.103s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup/lib/python3.10/site-packages'
+[10.103s] Level 1:colcon.colcon_core.environment:checking '/home/bryan/lhd_ws/src/install/lhd_bringup/bin'
+[10.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.ps1'
+[10.104s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.dsv'
+[10.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.sh'
+[10.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.bash'
+[10.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/bryan/lhd_ws/src/install/lhd_bringup/share/lhd_bringup/package.zsh'
+[10.104s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bryan/lhd_ws/src/install/lhd_bringup/share/colcon-core/packages/lhd_bringup)
+[10.105s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.105s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.105s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.105s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.109s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.109s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.109s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.116s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.117s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bryan/lhd_ws/src/install/local_setup.ps1'
+[10.118s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bryan/lhd_ws/src/install/_local_setup_util_ps1.py'
+[10.119s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bryan/lhd_ws/src/install/setup.ps1'
+[10.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bryan/lhd_ws/src/install/local_setup.sh'
+[10.120s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bryan/lhd_ws/src/install/_local_setup_util_sh.py'
+[10.121s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bryan/lhd_ws/src/install/setup.sh'
+[10.122s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bryan/lhd_ws/src/install/local_setup.bash'
+[10.122s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bryan/lhd_ws/src/install/setup.bash'
+[10.123s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bryan/lhd_ws/src/install/local_setup.zsh'
+[10.124s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bryan/lhd_ws/src/install/setup.zsh'

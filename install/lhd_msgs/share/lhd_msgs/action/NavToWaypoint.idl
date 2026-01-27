@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from lhd_msgs/action/NavToWaypoint.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseArray.idl"
+#include "std_msgs/msg/Float64MultiArray.idl"
+
+module lhd_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "goal")
+    struct NavToWaypoint_Goal {
+      geometry_msgs::msg::PoseArray waypoints;
+    };
+    @verbatim (language="comment", text=
+      "result")
+    struct NavToWaypoint_Result {
+      float time_taken;
+    };
+    @verbatim (language="comment", text=
+      "feedback")
+    struct NavToWaypoint_Feedback {
+      @verbatim (language="comment", text=
+        "[x, y, theta]")
+      std_msgs::msg::Float64MultiArray current_x_y_theta;
+    };
+  };
+};

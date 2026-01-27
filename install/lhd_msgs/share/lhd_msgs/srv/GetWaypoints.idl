@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from lhd_msgs/srv/GetWaypoints.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/PoseArray.idl"
+
+module lhd_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "request")
+    struct GetWaypoints_Request {
+      geometry_msgs::msg::Pose start;
+
+      geometry_msgs::msg::Pose end;
+    };
+    @verbatim (language="comment", text=
+      "response")
+    struct GetWaypoints_Response {
+      geometry_msgs::msg::PoseArray waypoints;
+
+      boolean success;
+    };
+  };
+};

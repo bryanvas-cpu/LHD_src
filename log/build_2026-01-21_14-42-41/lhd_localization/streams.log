@@ -1,0 +1,68 @@
+[0.015s] Invoking command in '/home/bryan/lhd_ws/src/build/lhd_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_localization -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_localization
+[0.066s] -- The C compiler identification is GNU 11.4.0
+[0.106s] -- The CXX compiler identification is GNU 11.4.0
+[0.112s] -- Detecting C compiler ABI info
+[0.173s] -- Detecting C compiler ABI info - done
+[0.181s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.181s] -- Detecting C compile features
+[0.181s] -- Detecting C compile features - done
+[0.184s] -- Detecting CXX compiler ABI info
+[0.256s] -- Detecting CXX compiler ABI info - done
+[0.264s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.264s] -- Detecting CXX compile features
+[0.265s] -- Detecting CXX compile features - done
+[0.268s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.422s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.571s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.616s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.623s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.633s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.645s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.662s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.710s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.714s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.740s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.751s] -- Looking for pthread.h
+[0.819s] -- Looking for pthread.h - found
+[0.819s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.891s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.892s] -- Found Threads: TRUE  
+[0.953s] -- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+[0.958s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.993s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.007s] -- Found tf2: 0.25.13 (/opt/ros/humble/share/tf2/cmake)
+[1.069s] -- Configuring done
+[1.073s] -- Generating done
+[1.074s] -- Build files have been written to: /home/bryan/lhd_ws/src/build/lhd_localization
+[1.081s] Invoked command in '/home/bryan/lhd_ws/src/build/lhd_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake /home/bryan/lhd_ws/src/lhd_localization -DCMAKE_INSTALL_PREFIX=/home/bryan/lhd_ws/src/install/lhd_localization
+[1.082s] Invoking command in '/home/bryan/lhd_ws/src/build/lhd_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_localization -- -j16 -l16
+[1.120s] Invoked command in '/home/bryan/lhd_ws/src/build/lhd_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --build /home/bryan/lhd_ws/src/build/lhd_localization -- -j16 -l16
+[1.121s] Invoking command in '/home/bryan/lhd_ws/src/build/lhd_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_localization
+[1.128s] -- Install configuration: ""
+[1.128s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/launch
+[1.128s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/launch/local_localization.launch.py
+[1.128s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/launch/global_localization.launch.py
+[1.128s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/config
+[1.128s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/config/ekf.yaml
+[1.129s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/config/amcl.yaml
+[1.129s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/rviz
+[1.129s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/rviz/amcl_particle_cloud.rviz
+[1.129s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/lib/lhd_localization/kalman_filter.py
+[1.129s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/lib/lhd_localization/imu_republisher.py
+[1.130s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/lib/lhd_localization/odometry_motion_model.py
+[1.130s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/ament_index/resource_index/package_run_dependencies/lhd_localization
+[1.130s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/ament_index/resource_index/parent_prefix_path/lhd_localization
+[1.130s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/environment/ament_prefix_path.sh
+[1.130s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/environment/ament_prefix_path.dsv
+[1.130s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/environment/path.sh
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/environment/path.dsv
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/local_setup.bash
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/local_setup.sh
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/local_setup.zsh
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/local_setup.dsv
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.dsv
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/ament_index/resource_index/packages/lhd_localization
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/cmake/lhd_localizationConfig.cmake
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/cmake/lhd_localizationConfig-version.cmake
+[1.131s] -- Installing: /home/bryan/lhd_ws/src/install/lhd_localization/share/lhd_localization/package.xml
+[1.134s] Invoked command in '/home/bryan/lhd_ws/src/build/lhd_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bryan/bumperbot_ws/install/bumperbot_py_examples:/home/bryan/hexapod_ws/install/mpu9250:/opt/ros/humble /usr/bin/cmake --install /home/bryan/lhd_ws/src/build/lhd_localization
